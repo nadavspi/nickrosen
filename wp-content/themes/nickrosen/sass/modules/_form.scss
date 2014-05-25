@@ -1,0 +1,33 @@
+fieldset {
+  margin: 0;
+  @include padding-x(0);
+  border: 0;
+}
+
+input:not([type="submit"]), textarea {
+  padding: 0 0.25em;
+  width: 100%;
+  @include at-breakpoint($medium) {
+    width: auto;
+  }
+}
+
+.contact {
+  @include at-breakpoint($medium) {
+    input {
+      max-width: 300px;
+    }
+    textarea {
+      max-width: 400px;
+    }
+  }
+}
+
+// Contact form 7
+span.wpcf7-not-valid-tip {
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  font-style: italic;
+  color: inherit;
+}
+

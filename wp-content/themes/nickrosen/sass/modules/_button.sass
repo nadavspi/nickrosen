@@ -1,0 +1,30 @@
+.button
+  display: inline-block
+  width: 100%
+  margin-top: 1rem
+  padding: 0.8em 0.5em
+  +at-breakpoint($medium)
+    width: auto
+    padding: 0.3em 1.5em
+
+  font-size: 0.9em
+  font-weight: 500
+  letter-spacing: 1px
+  text-transform: uppercase
+  text-decoration: none
+
+  color: #fff !important
+  background-color: $maroon
+  border: 0
+  box-shadow: 1px 2px 0 1px darken($maroon, 10%)
+  &:hover
+    background-color: darken($maroon, 10%)
+    // box-shadow: none
+  transition: background-color .2s ease-in-out
+
+.button--important
+  @extend .button
+  @include at-breakpoint($medium)
+    padding: 0.75rem 1.5rem
+  font-size: 1em
+

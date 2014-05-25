@@ -1,0 +1,28 @@
+@import "../vendor/susy/susyone"
+
+$show-grid-backgrounds: false
+
+$total-columns      : 7
+$column-width       : 5.1em
+$gutter-width       : 2em
+$grid-padding       : $gutter-width
+
+$medium:   8
+$large: 12
+$extralarge: 16
+
+$layouts: $total-columns, $medium, $large
+
+
+.main
+  +container($total-columns, $medium, $large)
+
+// Re-apply grid background at each breakpoint
+@each $layout in $layouts
+  +at-breakpoint($layout)
+    html
+      +susy-grid-background
+
+
+main, section, body > footer 
+  +clearfix

@@ -1,0 +1,51 @@
+.nav
+  font-size: 1.2rem
+  letter-spacing: 1px 
+  text-align: center
+
+  ul
+    display: none
+    margin: 0
+    padding: 0
+    text-align: center
+    &.is-visible
+      display: block
+      margin-top: 1rem
+    +at-breakpoint($medium)
+      display: block
+
+  +at-breakpoint($medium)
+    li
+      display: inline
+      vertical-align: super
+    li + li
+      padding-left: 5rem
+  a
+    text-decoration: none
+    position: relative
+    &:before 
+      /* for larger click target */
+      position: absolute
+      top: -0.5rem
+      bottom: -0.5rem
+      left: -1rem
+      right: -1rem
+      content: ''
+
+
+  &.opened 
+    li
+      display: block
+
+.nav__nick
+  @extend %serif
+  font-weight: 500
+  font-style: italic
+  letter-spacing: 3px
+  vertical-align: top !important
+  +at-breakpoint($medium)
+    font-size: 2.5rem
+
+.nav__toggle
+  +at-breakpoint($medium)
+    display: none

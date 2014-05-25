@@ -1,0 +1,10 @@
+.callout {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  border-top: 8px solid $maroon;
+  border-bottom: 8px solid $maroon;
+  border-radius: 10px;
+
+  @extend .clearfix;
+}

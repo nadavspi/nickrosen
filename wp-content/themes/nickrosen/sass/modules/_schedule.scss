@@ -1,0 +1,82 @@
+.event__meta {
+  @extend h4;
+}
+.event__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.event {
+  @extend .clearfix;
+}
+
+.event + .event {
+  margin-top: 2rem;
+}
+// .event {
+  // @include at-breakpoint($medium) {
+  //   @include span-columns(4);
+  //   @include nth-omega(2n);
+  // }
+// }
+
+.event__details {
+  margin-left: 0;
+}
+
+.event__content {
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 30em) { 
+  .event__meta {
+    min-width: 8rem;
+    margin-top: 0.28em;
+    text-align: right;
+  }
+
+
+  .event__details {
+    margin-left: 1.5em;
+
+  }
+
+  .event__meta,
+  .event__details {
+    float: left;
+  }
+
+}
+
+// venue
+.event__venue {
+  margin: 0.25em 0;
+}
+
+.event__venue__name {
+  font-weight: 400;
+}
+
+.event__venue__address {
+  margin-left: 0;
+  font-size: 0.8em;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+// Personnel
+.event__personnel {
+
+}
+
+.event__personnel__name,
+.event__personnel__instrument {
+  margin: 0;
+  display: inline-block;
+}
+
+
+
+
+
+

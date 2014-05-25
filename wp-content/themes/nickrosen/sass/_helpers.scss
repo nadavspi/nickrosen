@@ -1,0 +1,80 @@
+%background--dark {
+  background-color: rgba(black, 0.8);
+}
+
+%background--light {
+  background-color: rgba(silver, 0.1);
+}
+
+@mixin margin-x($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin margin-y($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+@mixin padding-x($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin padding-y($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+.margin-bottom--small {
+  margin-bottom: 0.5rem;
+}
+
+%narrow {
+  max-width: 60em;
+}
+
+/* Hide element while retaining visibility for screen readers
+ * From HTML5 Boilerplate
+ * http://h5bp.com/v
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+%clearfix, .clearfix {
+  clear: both;
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+/* Helpers for centering stuff
+ */
+
+.center {
+  text-align: center;
+}
+
+.center--margins {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

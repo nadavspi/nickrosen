@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: white;
+  background-color: $maroon;
+}
+
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  @extend %sans;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  background: url(images/old_moon.png);
+
+  @include at-breakpoint($medium) {
+    font-size: 18px;
+  }
+
+  @include at-breakpoint($large) {
+    font-size: 22px;
+  }
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: white;
+  @extend %background--dark;
+}
+
+.container {
+  flex: 1;
+  @extend %background--light;
+  border-top: 1px solid rgba($white, 0.1);
+  border-bottom: 1px solid rgba($white, 0.1);
+}
+
+.main {
+  @include padding-y(1rem);
+  @include padding-x(2rem);
+
+  @include at-breakpoint($medium) {
+    @include padding-x(3rem);
+  }
+}
+
+/*
+ *Footer
+ */
+body > footer {
+  @include padding-x(2rem);
+  @include padding-y(1rem);
+  font-size: 0.8em;
+
+  @include at-breakpoint($medium) {
+    @include padding-x(3rem);
+  }
+
+}
+
+@include at-breakpoint($medium) {
+  .footer__copyright {
+    float: left;
+  }
+  .footer__social {
+    float: right;
+  }
+}
+
+a {
+  color: inherit;
+  transition: color .2s ease-in-out;
+  &:hover, &:active {
+    color: $yellow;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+ *Headings
+ */
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+h1,h2,h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  @extend %serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+
+.mega {
+  margin-bottom: 0;
+  @include at-breakpoint($medium) {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+.img-box {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/*
+ *Layouts
+ */
+aside {
+  @extend .img-box;
+  @include at-breakpoint($large) {
+    @include span-columns(4.5);
+  }
+}
+
+.about aside,
+.contact aside {
+  @include at-breakpoint($large) {
+    @include span-columns(5.5);
+    @include omega;
+  }
+}
+
+.about {
+  @extend %narrow;
+}
+
+.contact {
+  max-width: 38em;
+}
+
+/*
+ *Homepage
+ */
+.welcome {
+  @include at-breakpoint($large) {
+    @include span-columns(7);
+    @include omega;
+  }
+  
+  $welcome-spacing: 2rem;
+
+  header {
+    text-align: center;
+    @include at-breakpoint($medium) {
+      margin-bottom: $welcome-spacing;
+    }
+    @include at-breakpoint($large) {
+      text-align: left;
+    }
+  }
+  
+  .half {
+    @media screen and (min-width: 40em) {
+      @include span-columns(4,8);
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @include at-breakpoint($large) {
+      @include span-columns(6,12);
+      &:nth-child(1n) {
+        margin-right: 0;
+        float: right;
+      }
+      &:nth-child(2n) {
+        margin-right: 2.40385%;
+        float: left;
+      }
+    }
+  }
+
+  .button {
+    margin-top: $welcome-spacing;
+  }
+}
+
+.welcome__cover {
+  margin-bottom: 1rem;
+  @include at-breakpoint($medium) {
+    margin-bottom: 0;
+  }
+  @include at-breakpoint($large) {
+    float: right;
+  }
+}
+
+.bio,
+.contact > article {
+  @include at-breakpoint($large) {
+    @include span-columns(6);
+  }
+}
+
+section {
+  @include margin-y(2rem);
+  @include margin-x(auto);
+  @include clearfix;
+}
+
+/*
+ *Music
+ */
+.music .album {
+  border-top: none;
+  padding-top: 0;
+}
+
+.personnel {
+  @include margin-y(1rem);
+  line-height: 1.2;
+  text-align: center;
+  @include clearfix;
+  em {
+    font-size: 1.2em;
+    display: block;
+  }
+  max-width: 33em;
+  @extend .center--margins;
+  @include at-breakpoint($large) {
+    // +margin-x(-6rem)
+  }
+
+  p {
+    @include at-breakpoint($medium) {
+      float: left;
+      width: calc(100% / 3 );
+    }
+
+    @include at-breakpoint($large) {
+      // width: calc( 100% / 6 )
+    }
+  }
+  img {
+    display: none;
+    @include at-breakpoint($medium) {
+      display: inline-block;
+    }
+  }
+}
+
+// +at-breakpoint($large)
+//   .bandcamp
+//     +span-columns(5)
+//   .personnel
+//     +span-columns(7)
+//     +omega
+.bandcamp {
+  text-align: center;
+  max-width: 20rem;
+  @extend .center--margins;
+}
+
+.discography {
+  @extend %clearfix;
+  border-top: 2px solid rgba($black, .12);
+  padding-top: 2rem;
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    text-align: center;
+  }
+  li {
+    @include at-breakpoint($medium) {
+      float: left;
+      margin: 1rem;
+    }
+  }
+}
+
+.tracks {
+  margin-bottom: 1rem;
+  @include at-breakpoint($large) {
+    margin-bottom: 0;
+  }
+}
+
+.videos {
+  .youtube-embed {
+    margin-bottom: 1rem;
+    @include at-breakpoint($medium) {
+      width: 48.5%;
+      margin-right: 3%;
+      float: left;
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include at-breakpoint($large) {
+  .tracks {
+    @include span-columns(6);
+  }
+  .videos {
+    @include span-columns(6);
+    @include omega;
+  }
+}
+
+
+/* Schedule layout */
+
+.schedule {
+  max-width: 30em;
+  & > article {
+    margin-top: 3rem;
+  }
+}
+
