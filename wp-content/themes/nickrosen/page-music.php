@@ -49,7 +49,7 @@ get_header(); ?>
           $tracks_loop = new WP_Query(array(
             'post_type' => 'discography',
             'orderby' => 'menu_order',
-            'order' => 'ASC'
+            'order' => 'DESC'
           ));
         if ($tracks_loop->have_posts()) {
         ?>
