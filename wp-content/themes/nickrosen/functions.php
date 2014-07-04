@@ -103,7 +103,7 @@ function nickrosen_post_types() {
       ),
       'public' => true,
       'supports' => array(
-        'title', 'thumbnail',
+        'title', 'thumbnail', 'page-attributes'
       )
     )
   );

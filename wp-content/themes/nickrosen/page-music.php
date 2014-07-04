@@ -46,7 +46,11 @@ get_header(); ?>
         /*
         *Discography
         */
-        $tracks_loop = new WP_Query(array('post_type' => 'discography'));
+          $tracks_loop = new WP_Query(array(
+            'post_type' => 'discography',
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+          ));
         if ($tracks_loop->have_posts()) {
         ?>
         <article class="discography">
