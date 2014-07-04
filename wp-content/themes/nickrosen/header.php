@@ -27,7 +27,7 @@
     <h1 class="visuallyhidden"><?php bloginfo('name'); ?></h1>
 		<nav class="nav" role="navigation">
       <h1 class="visuallyhidden">Navigation</h1>
-      <a href="#" class="nav__toggle">Show menu</a>
+      <a href="#" class="nav__toggle">Navigation</a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav__list' ) ); ?>
 		</nav>
 	</header>
