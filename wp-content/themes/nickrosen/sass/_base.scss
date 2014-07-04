@@ -68,6 +68,21 @@ body > footer {
 
 }
 
+.footer__social {
+  margin-top: 1em;
+  font-size: 1.2em;
+  a + a {
+    margin-left: 1.5em;
+  }
+
+  @include at-breakpoint($medium) {
+    margin-top: 0;
+    a + a {
+      margin-left: 0.75em;
+    }
+  }
+}
+
 @include at-breakpoint($medium) {
   .footer__copyright {
     float: left;
@@ -165,7 +180,9 @@ aside {
  *Homepage
  */
 .welcome {
+  margin-bottom: 2em;
   @include at-breakpoint($large) {
+    margin-bottom: 0;
     @include span-columns(7);
     @include omega;
   }
@@ -289,6 +306,7 @@ section {
   }
   li {
     max-width: 8em;
+    margin: 1em auto;
     @include at-breakpoint($medium) {
       float: left;
       margin: 1rem;
