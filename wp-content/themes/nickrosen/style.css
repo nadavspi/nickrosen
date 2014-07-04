@@ -393,8 +393,8 @@ table {
 ***/
 .main {
   *zoom: 1;
-  max-width: 47.7em;
-  _width: 47.7em;
+  max-width: 33em;
+  _width: 33em;
   padding-left: 2em;
   padding-right: 2em;
   margin-left: auto;
@@ -405,10 +405,10 @@ table {
   display: table;
   clear: both;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .main {
     *zoom: 1;
-    max-width: 54.8em;
+    max-width: 38em;
     padding-left: 2em;
     padding-right: 2em;
     margin-left: auto;
@@ -420,10 +420,10 @@ table {
     clear: both;
   }
 }
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   .main {
     *zoom: 1;
-    max-width: 83.2em;
+    max-width: 58em;
     padding-left: 2em;
     padding-right: 2em;
     margin-left: auto;
@@ -436,38 +436,32 @@ table {
   }
 }
 
-@media (min-width: 47.7em) {
+@media (min-width: 33em) {
   html {
     -moz-background-origin: content;
-    -o-background-origin: content-box;
     -webkit-background-origin: content;
     background-origin: content-box;
     -moz-background-clip: content;
-    -o-background-clip: content-box;
     -webkit-background-clip: content;
     background-clip: content-box;
   }
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   html {
     -moz-background-origin: content;
-    -o-background-origin: content-box;
     -webkit-background-origin: content;
     background-origin: content-box;
     -moz-background-clip: content;
-    -o-background-clip: content-box;
     -webkit-background-clip: content;
     background-clip: content-box;
   }
 }
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   html {
     -moz-background-origin: content;
-    -o-background-origin: content-box;
     -webkit-background-origin: content;
     background-origin: content-box;
     -moz-background-clip: content;
-    -o-background-clip: content-box;
     -webkit-background-clip: content;
     background-clip: content-box;
   }
@@ -566,12 +560,12 @@ html {
   text-rendering: optimizeLegibility;
   background: url(images/old_moon.png);
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   html {
     font-size: 18px;
   }
 }
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   html {
     font-size: 22px;
   }
@@ -596,7 +590,7 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .main {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -613,14 +607,30 @@ body > footer {
   padding-bottom: 1rem;
   font-size: 0.8em;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   body > footer {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 }
 
-@media (min-width: 54.8em) {
+.footer__social {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+.footer__social a + a {
+  margin-left: 1.5em;
+}
+@media (min-width: 38em) {
+  .footer__social {
+    margin-top: 0;
+  }
+  .footer__social a + a {
+    margin-left: 0.75em;
+  }
+}
+
+@media (min-width: 38em) {
   .footer__copyright {
     float: left;
   }
@@ -671,9 +681,9 @@ h3 {
 .mega {
   margin-bottom: 0;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .mega {
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 1.2;
   }
 }
@@ -690,20 +700,20 @@ p {
 /*
  *Layouts
  */
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   aside {
-    width: 37.19952%;
+    width: 37.06897%;
     float: left;
-    margin-right: 2.40385%;
+    margin-right: 3.44828%;
   }
 }
 
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   .about aside,
   .contact aside {
-    width: 45.73317%;
+    width: 45.68966%;
     float: left;
-    margin-right: 2.40385%;
+    margin-right: 3.44828%;
     float: right;
     margin-right: 0;
   }
@@ -716,11 +726,15 @@ p {
 /*
  *Homepage
  */
-@media (min-width: 83.2em) {
+.welcome {
+  margin-bottom: 2em;
+}
+@media (min-width: 58em) {
   .welcome {
-    width: 57.33173%;
+    margin-bottom: 0;
+    width: 56.89655%;
     float: left;
-    margin-right: 2.40385%;
+    margin-right: 3.44828%;
     float: right;
     margin-right: 0;
   }
@@ -728,32 +742,32 @@ p {
 .welcome header {
   text-align: center;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .welcome header {
     margin-bottom: 2rem;
   }
 }
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   .welcome header {
     text-align: left;
   }
 }
 @media screen and (min-width: 40em) {
   .welcome .half {
-    width: 48.17518%;
+    width: 47.36842%;
     float: left;
-    margin-right: 3.64964%;
+    margin-right: 5.26316%;
     display: inline;
   }
   .welcome .half:nth-child(2n) {
     margin-right: 0;
   }
 }
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   .welcome .half {
-    width: 48.79808%;
+    width: 48.27586%;
     float: left;
-    margin-right: 2.40385%;
+    margin-right: 3.44828%;
   }
   .welcome .half:nth-child(1n) {
     margin-right: 0;
@@ -769,25 +783,16 @@ p {
 }
 
 .welcome__cover {
-  margin-bottom: 1rem;
-}
-@media (min-width: 54.8em) {
-  .welcome__cover {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 83.2em) {
-  .welcome__cover {
-    float: right;
-  }
+  max-width: 70%;
+  margin: 0 auto;
 }
 
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   .bio,
   .contact > article {
-    width: 48.79808%;
+    width: 48.27586%;
     float: left;
-    margin-right: 2.40385%;
+    margin-right: 3.44828%;
   }
 }
 
@@ -821,7 +826,7 @@ section {
   font-size: 1.2em;
   display: block;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .personnel p {
     float: left;
     width: calc(100% / 3 );
@@ -830,7 +835,7 @@ section {
 .personnel img {
   display: none;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .personnel img {
     display: inline-block;
   }
@@ -850,7 +855,11 @@ section {
   list-style-type: none;
   text-align: center;
 }
-@media (min-width: 54.8em) {
+.discography li {
+  max-width: 8em;
+  margin: 1em auto;
+}
+@media (min-width: 38em) {
   .discography li {
     float: left;
     margin: 1rem;
@@ -860,7 +869,7 @@ section {
 .tracks {
   margin-bottom: 1rem;
 }
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   .tracks {
     margin-bottom: 0;
   }
@@ -869,7 +878,7 @@ section {
 .videos .youtube-embed {
   margin-bottom: 1rem;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .videos .youtube-embed {
     width: 48.5%;
     margin-right: 3%;
@@ -880,17 +889,17 @@ section {
   }
 }
 
-@media (min-width: 83.2em) {
+@media (min-width: 58em) {
   .tracks {
-    width: 48.79808%;
+    width: 48.27586%;
     float: left;
-    margin-right: 2.40385%;
+    margin-right: 3.44828%;
   }
 
   .videos {
-    width: 48.79808%;
+    width: 48.27586%;
     float: left;
-    margin-right: 2.40385%;
+    margin-right: 3.44828%;
     float: right;
     margin-right: 0;
   }
@@ -918,16 +927,21 @@ section {
   display: block;
   margin-top: 1rem;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 58em) {
   .nav ul {
     display: block;
   }
 }
-@media (min-width: 54.8em) {
+@media (min-width: 58em) {
   .nav li {
     display: inline;
     vertical-align: super;
   }
+  .nav li + li {
+    padding-left: 3rem;
+  }
+}
+@media (min-width: 1280px) {
   .nav li + li {
     padding-left: 5rem;
   }
@@ -955,16 +969,29 @@ section {
   letter-spacing: 3px;
   vertical-align: top !important;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .nav__nick {
     font-size: 2.5rem;
   }
 }
 
-@media (min-width: 54.8em) {
+.nav__toggle {
+  position: relative;
+  padding-left: 1.25em;
+}
+@media (min-width: 58em) {
   .nav__toggle {
     display: none;
   }
+}
+.nav__toggle:before {
+  content: "";
+  position: absolute;
+  top: 0.4em !important;
+  width: 1em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white;
 }
 
 body > header {
@@ -988,7 +1015,7 @@ body > header {
   box-shadow: 1px 2px 0 1px #6f113e;
   transition: background-color 0.2s ease-in-out;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .button, .button--important {
     width: auto;
     padding: 0.3em 1.5em;
@@ -1001,7 +1028,7 @@ body > header {
 .button--important {
   font-size: 1em;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .button--important {
     padding: 0.75rem 1.5rem;
   }
@@ -1027,13 +1054,13 @@ input:not([type="submit"]), textarea {
   padding: 0 0.25em;
   width: 100%;
 }
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   input:not([type="submit"]), textarea {
     width: auto;
   }
 }
 
-@media (min-width: 54.8em) {
+@media (min-width: 38em) {
   .contact input {
     max-width: 300px;
   }
@@ -1049,9 +1076,23 @@ span.wpcf7-not-valid-tip {
   color: inherit;
 }
 
+.schedule {
+  text-align: center;
+}
+@media (min-width: 38em) {
+  .schedule {
+    text-align: left;
+  }
+}
+
 .event__title {
-  margin: 0;
+  margin: 0.5em 0;
   font-weight: 400;
+}
+@media screen and (min-width: 30em) {
+  .event__title {
+    margin: 0;
+  }
 }
 
 .event + .event {
