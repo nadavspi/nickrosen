@@ -293,6 +293,7 @@ section {
     text-align: center;
   }
   li {
+    max-width: 8em;
     @include at-breakpoint($medium) {
       float: left;
       margin: 1rem;
