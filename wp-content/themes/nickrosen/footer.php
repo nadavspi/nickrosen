@@ -13,7 +13,9 @@
   &copy; <?php echo date("Y") ?> Nick Rosen. All rights reserved, whatever that means.<br>
     Website by <a href="http://nadav.is">Nadav Spiegelman</a>.
   </div>
-  <div class="footer__social">Email and social media icons will go here</div>
+  <div class="footer__social">
+    <?php dynamic_sidebar('footer_social'); ?>
+  </div>
 </footer>
 
 <?php wp_footer(); ?>
