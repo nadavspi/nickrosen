@@ -118,12 +118,18 @@ function nickrosen_post_types() {
     array(
       'label' => 'Tracks',
       'public' => true,
+      'supports' => array(
+        'page-attributes'
+        ),
     )
   );
   register_post_type( 'videos',
     array(
       'label' => 'Videos',
       'public' => true,
+      'supports' => array(
+        'page-attributes'
+        ),
     )
   );
   register_post_type( 'schedule',

@@ -14,7 +14,11 @@ get_header(); ?>
         /*
         *Tracks
         */
-        $tracks_loop = new WP_Query(array('post_type' => 'tracks'));
+        $tracks_loop = new WP_Query(array(
+          'post_type' => 'tracks',
+          'orderby' => 'menu_order',
+          'order' => 'DESC'
+        ));
         if ($tracks_loop->have_posts()) {
         ?>
         <article class="tracks">
@@ -30,7 +34,11 @@ get_header(); ?>
         /*
         *Videos
         */
-        $tracks_loop = new WP_Query(array('post_type' => 'videos'));
+          $tracks_loop = new WP_Query(array(
+            'post_type' => 'videos',
+            'orderby' => 'menu_order',
+            'order' => 'DESC'
+          ));
         if ($tracks_loop->have_posts()) {
         ?>
         <article class="videos">
