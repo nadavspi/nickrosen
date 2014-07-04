@@ -8,7 +8,7 @@
 
 <li>
   <?php if ($url = get_field('discography_url')) { ?>
-    <a href="<?php echo $url; ?>">
+    <a href="<?php echo $url; ?>" target="_blank">
   <?php } ?>
     <?php the_post_thumbnail(); ?>
   <?php if ($url) { ?>
