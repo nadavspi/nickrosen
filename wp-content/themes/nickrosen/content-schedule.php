@@ -8,7 +8,10 @@
 <dl class="event">
   <dt class="event__meta">
     <?php if (get_field('event_date')): ?>
-      <?php the_field('event_date') ?><br>
+      <?php
+        $event_date = new DateTime(get_field('event_date'));
+        echo $event_date->format('F j, Y'); 
+      ?><br>
     <?php endif; ?>
     <?php if (get_field('event_time')): ?>
       <?php the_field('event_time') ?><br>
