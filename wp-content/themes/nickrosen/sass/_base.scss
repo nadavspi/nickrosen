@@ -121,7 +121,7 @@ h3 {
 .mega {
   margin-bottom: 0;
   @include at-breakpoint($medium) {
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 1.2;
   }
 }
@@ -208,13 +208,8 @@ aside {
 }
 
 .welcome__cover {
-  margin-bottom: 1rem;
-  @include at-breakpoint($medium) {
-    margin-bottom: 0;
-  }
-  @include at-breakpoint($large) {
-    float: right;
-  }
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 .bio,
