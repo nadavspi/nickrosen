@@ -4,6 +4,13 @@
  *
  * @package nickrosen
  */
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
 
 /**
  * Set the content width based on the theme's design and stylesheet.
