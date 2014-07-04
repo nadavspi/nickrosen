@@ -1,9 +1,19 @@
+.schedule {
+  text-align: center;
+  @include at-breakpoint($medium) {
+    text-align: left;
+  }
+}
+
 .event__meta {
   @extend h4;
 }
 .event__title {
-  margin: 0;
+  margin: 0.5em 0;
   font-weight: 400;
+  @media screen and (min-width: 30em) { 
+    margin: 0;
+  }
 }
 
 .event {
