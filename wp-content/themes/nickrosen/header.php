@@ -17,6 +17,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <script type="text/javascript" src="//use.typekit.net/ifq5ioo.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
@@ -27,7 +28,7 @@
     <h1 class="visuallyhidden"><?php bloginfo('name'); ?></h1>
 		<nav class="nav" role="navigation">
       <h1 class="visuallyhidden">Navigation</h1>
-      <a href="#" class="nav__toggle">Show menu</a>
+      <a href="#" class="nav__toggle">Navigation</a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav__list' ) ); ?>
 		</nav>
 	</header>

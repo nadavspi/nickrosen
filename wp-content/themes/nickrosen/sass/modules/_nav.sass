@@ -11,13 +11,16 @@
     &.is-visible
       display: block
       margin-top: 1rem
-    +at-breakpoint($medium)
+    +at-breakpoint($large)
       display: block
 
-  +at-breakpoint($medium)
+  +at-breakpoint($large)
     li
       display: inline
       vertical-align: super
+    li + li
+      padding-left: 3rem
+  @media (min-width: 1280px)
     li + li
       padding-left: 5rem
   a
@@ -47,5 +50,20 @@
     font-size: 2.5rem
 
 .nav__toggle
-  +at-breakpoint($medium)
+  +at-breakpoint($large)
     display: none
+  position: relative
+  padding-left: 1.25em
+  &:before
+    content: ""
+    position: absolute
+    top: 0.4em !important
+    width: 1em
+    height: 0.15em
+    background: white
+    box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white
+  // &:hover, &:active, &:focus
+  //   &:before
+  //     background: white
+  //     box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white
+

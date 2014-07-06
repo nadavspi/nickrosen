@@ -4,6 +4,13 @@
  *
  * @package nickrosen
  */
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -62,10 +69,10 @@ add_action( 'after_setup_theme', 'nickrosen_setup' );
  */
 function nickrosen_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'nickrosen' ),
-		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'name'          => 'Footer social icons',
+		'id'            => 'footer_social',
+		'before_widget' => '',
+		'after_widget'  => '',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
@@ -103,7 +110,7 @@ function nickrosen_post_types() {
       ),
       'public' => true,
       'supports' => array(
-        'title', 'thumbnail',
+        'title', 'thumbnail', 'page-attributes'
       )
     )
   );
@@ -111,12 +118,18 @@ function nickrosen_post_types() {
     array(
       'label' => 'Tracks',
       'public' => true,
+      'supports' => array(
+        'title', 'editor', 'page-attributes'
+        ),
     )
   );
   register_post_type( 'videos',
     array(
       'label' => 'Videos',
       'public' => true,
+      'supports' => array(
+        'title', 'editor', 'page-attributes'
+        ),
     )
   );
   register_post_type( 'schedule',
