@@ -4,22 +4,34 @@ fieldset {
   border: 0;
 }
 
-input:not([type="submit"]), textarea {
-  padding: 0 0.25em;
-  width: 100%;
-  @include at-breakpoint($medium) {
-    width: auto;
-  }
+label {
+  display: block;
+  font-size: 0.8em;
+  @extend .visuallyhidden;
 }
 
-.contact {
+input:not([type="submit"]), textarea {
+  padding: 0.25em 0.5em;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+
+  color: white;
+  background-color: rgba(0,0,0,0.15);
+  transition: background-color .2s linear;
+
+  placeholder {
+    color: white;
+  }
+
+  &:focus {
+    background-color: rgba(0,0,0,0.3);
+    outline: none;
+  }
+
   @include at-breakpoint($medium) {
-    input {
-      max-width: 300px;
-    }
-    textarea {
-      max-width: 400px;
-    }
+    // width: auto;
+    font-size: inherit;
   }
 }
 
