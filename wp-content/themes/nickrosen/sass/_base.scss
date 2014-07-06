@@ -173,8 +173,14 @@ aside {
 }
 
 .contact {
-  max-width: 38em;
+  max-width: 24em;
+  margin: 0 auto;
+
+  .button {
+    width: 100%;
+  }
 }
+
 
 /*
  *Homepage

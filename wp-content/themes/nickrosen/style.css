@@ -491,7 +491,7 @@ body {
  * From HTML5 Boilerplate
  * http://h5bp.com/v
  */
-.visuallyhidden {
+.visuallyhidden, label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -720,7 +720,11 @@ p {
 }
 
 .contact {
-  max-width: 38em;
+  max-width: 24em;
+  margin: 0 auto;
+}
+.contact .button, .contact .button--important {
+  width: 100%;
 }
 
 /*
@@ -994,11 +998,6 @@ section {
   box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white;
 }
 
-body > header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .button, .button--important {
   display: inline-block;
   width: 100%;
@@ -1050,22 +1049,30 @@ fieldset {
   border: 0;
 }
 
+label {
+  display: block;
+  font-size: 0.8em;
+}
+
 input:not([type="submit"]), textarea {
-  padding: 0 0.25em;
+  padding: 0.25em 0.5em;
   width: 100%;
+  font-size: 16px;
+  border: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: background-color .2s linear;
+}
+input:not([type="submit"]) placeholder, textarea placeholder {
+  color: white;
+}
+input:not([type="submit"]):focus, textarea:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 @media (min-width: 38em) {
   input:not([type="submit"]), textarea {
-    width: auto;
-  }
-}
-
-@media (min-width: 38em) {
-  .contact input {
-    max-width: 300px;
-  }
-  .contact textarea {
-    max-width: 400px;
+    font-size: inherit;
   }
 }
 
