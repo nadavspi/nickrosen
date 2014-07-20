@@ -22,6 +22,13 @@
 
 .event + .event {
   margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $silver;
+
+  @media screen and (min-width: 30em) { 
+    padding-top: 0;
+    border-top: 0;
+  }
 }
 // .event {
   // @include at-breakpoint($medium) {
@@ -40,7 +47,7 @@
 
 @media screen and (min-width: 30em) { 
   .event__meta {
-    min-width: 8rem;
+    width: 8rem;
     margin-top: 0.28em;
     text-align: right;
   }
@@ -48,7 +55,7 @@
 
   .event__details {
     margin-left: 1.5em;
-
+    width: calc(100% - 8rem - 1.5em);
   }
 
   .event__meta,
