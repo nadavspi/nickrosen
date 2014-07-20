@@ -439,9 +439,11 @@ table {
 @media (min-width: 33em) {
   html {
     -moz-background-origin: content;
+    -o-background-origin: content-box;
     -webkit-background-origin: content;
     background-origin: content-box;
     -moz-background-clip: content;
+    -o-background-clip: content-box;
     -webkit-background-clip: content;
     background-clip: content-box;
   }
@@ -449,9 +451,11 @@ table {
 @media (min-width: 38em) {
   html {
     -moz-background-origin: content;
+    -o-background-origin: content-box;
     -webkit-background-origin: content;
     background-origin: content-box;
     -moz-background-clip: content;
+    -o-background-clip: content-box;
     -webkit-background-clip: content;
     background-clip: content-box;
   }
@@ -459,9 +463,11 @@ table {
 @media (min-width: 58em) {
   html {
     -moz-background-origin: content;
+    -o-background-origin: content-box;
     -webkit-background-origin: content;
     background-origin: content-box;
     -moz-background-clip: content;
+    -o-background-clip: content-box;
     -webkit-background-clip: content;
     background-clip: content-box;
   }
@@ -595,6 +601,11 @@ body {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+
+body > header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*
@@ -1104,6 +1115,14 @@ span.wpcf7-not-valid-tip {
 
 .event + .event {
   margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #dddddd;
+}
+@media screen and (min-width: 30em) {
+  .event + .event {
+    padding-top: 0;
+    border-top: 0;
+  }
 }
 
 .event__details {
@@ -1116,13 +1135,14 @@ span.wpcf7-not-valid-tip {
 
 @media screen and (min-width: 30em) {
   .event__meta {
-    min-width: 8rem;
+    width: 8rem;
     margin-top: 0.28em;
     text-align: right;
   }
 
   .event__details {
     margin-left: 1.5em;
+    width: calc(100% - 8rem - 1.5em);
   }
 
   .event__meta,
