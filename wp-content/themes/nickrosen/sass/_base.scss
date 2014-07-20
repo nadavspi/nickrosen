@@ -54,6 +54,10 @@ body {
   }
 }
 
+body > header {
+  @include padding-y(1rem);
+}
+
 /*
  *Footer
  */
