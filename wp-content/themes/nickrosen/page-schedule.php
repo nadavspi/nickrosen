@@ -38,7 +38,7 @@ get_header(); ?>
       'meta_value' => date('Ymd'),
       'meta_compare' => '<',
       'orderby' => 'meta_value_num',
-      'order' => 'ASC',
+      'order' => 'DESC',
     ));
   if ($past_schedule_loop->have_posts()) {
 ?>
